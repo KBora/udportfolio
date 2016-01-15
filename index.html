@@ -7,9 +7,7 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Felix the : Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
+ 
     <!-- <link href="css/style.css" rel="stylesheet"> -->
     <style>
     html {
@@ -116,7 +114,20 @@ footer span { float: right; font-style: italic; }
       // TODO: replace with your Google Analytics profile ID.
       ga('create', 'UA-55399890-11');
       ga('send', 'pageview');
+
+      function addFonts(d,t){
+        var g=d.createElement(t);
+        s=d.getElementsByTagName(t)[0];
+        g.href='https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+        g.rel='stylesheet';
+        s.parentNode.insertBefore(g,s)
+        }
+
+        window.addEventListener("load",function(a){
+          addFonts(document,'link');
+        });
     </script>
+
     <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
   </body>
